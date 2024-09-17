@@ -1,4 +1,6 @@
 # Personal Portfolio ⚡️ 
+This is a personal website made by Abhishek Madan.
+
 this repo is a clone of
 https://github.com/varadbhogayata/varadbhogayata.github.io 
 
