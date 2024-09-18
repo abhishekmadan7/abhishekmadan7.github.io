@@ -319,6 +319,44 @@
 
     <!-- Fourth Section: Projects -->
     <section id="projects" class="section scrollspy">
+      <script>
+        let button = document.getElementById('myButton');
+
+        projects=[
+          ["MapProject",new Date('2022-04-30')],
+          ["projectDS",new Date('2023-04-30')]
+        ];
+
+        // Initialize a variable to store the most recent project
+        let mostRecentProject = projects[0];
+
+        // Loop through the array to find the most recent date
+        for (let i = 1; i < projects.length; i++) {
+          if (projects[i][1] > mostRecentProject[1]) {
+              mostRecentProject = projects[i];
+          }
+        }
+
+        for (let i = 0; i < projects.length; i++) {
+          let div = document.getElementById(projects[i][0]);
+            div.style.display = 'none';
+        }
+
+        let mostRecentDiv = document.getElementById(mostRecentProject[0]);
+
+        mostRecentDiv.display.style = 'block';
+
+
+        // Add an event listener for the 'click' event
+        button.addEventListener('click', function() {
+          for (let i = 0; i < projects.length; i++) {
+          let div = document.getElementById(projects[i][0]);
+            div.style.display = 'block';
+        }
+        });
+
+        
+      </script>
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
         <div class="row">
@@ -362,44 +400,46 @@
             </div>
           </div>
 
-        <div id="projectDS">
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="DS" src="/assets/img/ds.jpeg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Distributed Systems<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Distributed Systems
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Java</li>
-                  <li>Designed and deployed robust distributed server architecture(in Java) which can handle multiple concurrent clients and a vast array of failure scenarios.</li>
+          <div id="projectDS">
+            <div class="col s12 m6 l4">
+              <div class="card medium">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img alt="DS" src="/assets/img/ds.jpeg" style="height: 100%; width: 100%" class="activator" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline">Distributed Systems<i
+                      class="mdi-navigation-more-vert right"></i></span>
+                  <p>
+                    Distributed Systems
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <!-- TODO: change this -- only close button -->
+                  <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
+                  <span class="card-title grey-text"><small>Accomplishments</small><i
+                      class="mdi-navigation-close right"></i></span>
+                  <ul>
+                    <li><b>Tools:</b> Java</li>
+                    <li>Designed and deployed robust distributed server architecture(in Java) which can handle multiple concurrent clients and a vast array of failure scenarios.</li>
 
 
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://galvanic-music.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+                  </ul>
+                  <div class="card-action">
+                    <a aria-label="Visit " href="https://galvanic-music.herokuapp.com/" target="_blank" data-position="top"
+                      data-tooltip="View Online"
+                      class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                        class="fa fa-external-link"></i></a>
+                    <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
+                      target="_blank" data-position="top" data-tooltip="View Source"
+                      class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                        class="fa fa-github"></i></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </divd>
+        <button id="myButton">Load More</button>
       </div>
     </section>
 
