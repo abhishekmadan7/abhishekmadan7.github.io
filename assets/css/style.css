@@ -140,7 +140,7 @@ body {
 } */
 
 a {
-  color: #004d40;
+  color: #1002d7;
 }
 
 /* main blockqoute */
@@ -320,12 +320,12 @@ h3 {
 } */
 
 #intro.section {
-  background: #a7ffeb repeat;
+  background: #100128 repeat;
   position: relative;
 }
 
 #intro.section .container {
-  color: white;
+  color: rgb(49, 129, 194);
   font-weight: 200;
   left: 0;
   position: absolute;
